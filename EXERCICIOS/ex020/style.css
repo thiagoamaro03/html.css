@@ -1,0 +1,8 @@
+div{
+    display: inline-block;
+    background-color: rgb(194, 211, 205);
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+}

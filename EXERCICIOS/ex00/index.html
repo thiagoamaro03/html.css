@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Interativo</title>
+    <style>
+        body {
+            background-color: #282c34;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.5s;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            position: relative;
+            animation: pulsar 1.5s infinite ease-in-out;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Animação de pulsação */
+        @keyframes pulsar {
+            0% {
+                transform: scale(1);
+                color: #ff6347;
+            }
+            50% {
+                transform: scale(1.1);
+                color: #ff1493;
+            }
+            100% {
+                transform: scale(1);
+                color: #ff6347;
+            }
+        }
+
+        /* Efeito de movimento ao passar o mouse */
+        h1:hover {
+            animation: movimentar 0.5s ease-out infinite;
+            transform: rotate(10deg);
+        }
+
+        @keyframes movimentar {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Adicionando brilho ao texto */
+        h1 {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px #ff1493;
+        }
+
+        /* Efeito de clique para mudar a cor de fundo */
+        h1:active {
+            transform: scale(1.2);
+            color: #00FF00; /* Cor ao clicar */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="helloWorld">Hello World</h1>
+
+    <script>
+        // Mudança de fundo ao clicar na palavra "Hello World"
+        document.getElementById('helloWorld').addEventListener('click', function() {
+            const colors = ['#282c34', '#3498db', '#e74c3c', '#2ecc71', '#9b59b6'];
+            const currentColor = document.body.style.backgroundColor;
+            let newColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            // Evita a repetição da cor atual
+            while (newColor === currentColor) {
+                newColor = colors[Math.floor(Math.random() * colors.length)];
+            }
+
+            document.body.style.backgroundColor = newColor;
+        });
+    </script>
+
+</body>
+</html>
+

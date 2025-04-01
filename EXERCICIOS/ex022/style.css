@@ -1,0 +1,49 @@
+@import url(idroid.otf);
+@font-face {
+    font-family: 'font';
+    src: url(idroid.otf);
+}
+
+body{
+    font-family: 'font';
+    background-color: rgba(255, 255, 255, 0.76)7);
+    
+}
+div#cabeca{
+    border-radius: 15px;
+    box-shadow: 1px 2px 9px rgba(6, 49, 0, 0.534);
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0px 0px 0px;
+    background-image: linear-gradient(to top, rgb(15, 59, 26), rgb(43, 202, 77));
+    color: white;
+    text-align: center
+}
+div#menu{
+    text-align: left;   
+    cursor: pointer;
+}
+div#menu:hover{
+    color: rgb(16, 253, 16);
+    transition: 0.6s;
+}
+h1#cabeca{
+    margin: 10px 0px 20px 0px;
+    color: white;
+    text-align: center
+}
+li{
+    cursor: pointer; 
+    text-align: left;
+}
+h2{
+    margin: 0;
+    color: rgb(0, 0, 0); 
+    text-align: center;"
+}
+div#img{
+    text-align: center;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
